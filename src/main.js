@@ -1,6 +1,5 @@
 /* interacción con el DOM event listeners o event handlers, se usan las que estàn en data.js */
 import {
-
   allSelection, orderAZ,
 } from './data.js';
 import lol from './data/lol/lol.js';
@@ -64,4 +63,23 @@ liRoles.forEach((option) => {
     });
     divContador.innerHTML = (`${typeRol} ${functionFilterRol.length}`);
   });
+});
+
+document.getElementById('AtoZ').addEventListener('click', () => {
+  const list = document.querySelector('#root');
+  list.innerHTML = '';
+  const seeAllChampion = Object.values(allChampionList).forEach((champion) => {
+    const div = document.createElement('div');
+    const img = document.createElement('img');
+    const p = document.createElement('p');
+    p.className = 'nameOfChampion';
+    img.className = 'imageOfChampion';
+    p.innerHTML = `${champion.name}`;
+    img.src = `${champion.splash}`;
+    div.appendChild(img);
+    div.appendChild(p);
+    list.appendChild(div);
+    divContador.innerHTML = 'Todos los campeones 122';
+  });
+  return seeAllChampion(orderAZ(allChampionList));
 });

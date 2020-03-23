@@ -16,7 +16,6 @@ export const allSelection = (allchampionList, typeRol) => {
   /* De este nuevo array de valores queremos encontrar aquellos que coincidan con  */
   /* typeRol que le vamos a pasar, pero este tiene que existir, por tanto índice mayor a 0 */
 };
-
 export const orderAZ = (arr) => {
   arr.sort((a, b) => {
     if (a.name > b.name) {
