@@ -6,7 +6,6 @@
   <meta charset="utf-8">
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
-  <script src="prefix.js"></script>
   <link rel="icon" href="assets/pinLol.png">
   <link href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
@@ -21,7 +20,7 @@
       </div>
       <div id="buttons_colection_champions">
         <input id="button_colection" type="button" value="Colección">
-        <div id="contador"> Campeones 122 </div>
+        <div id="contador"> Campeones </div>
       </div>
       <div>
         <img class="detail_diamont_Riot" src="assets/detail1.png" alt="">
@@ -39,27 +38,27 @@
               <li class="Roles" data-value="Assassin"> <a> Asesino</a></li>
               <li class="Roles" data-value="Marksman"> <a> Tirador</a></li>
               <li class="Roles" data-value="Support"> <a> Apoyo </a></li>
-              <li class="Roles" data-value="Support"> <a> Apoyo </a></li>
             </ul>
           </li>
           <li id="order" name="order">Orden
             <ul>
               <li class="orden A-Z" value="A-Z"> <a href="" id="AtoZ"> A - Z </a></li>
               <li class="orden Z-A" value="Z-A"> <a href=""> Z - A </a></li>
-              <li> <a href=""> Ascendente</a></li>
+              <li id> <a href=""> Ascendente</a></li>
               <li> <a href=""> Descendente</a></li>
-              <li><a href="">Independiente</a></li>
-              <li><a href="">Independiente</a></li>
+
             </ul>
           </li>
-          <li>Habilidad popular
+          <section >
+          <li id = "habilidad_popular" class="habilidad_popular">Habilidad popular
             <ul>
-              <li class="HP"> <a href=""> Rango de ataque</a></li>
-              <li> <a href=""> Daño crítico</a></li>
-              <li> <a href=""> Dificultad de dominio</a></li>
-              <li> <a href=""> Velocidad de ataque</a></li>
+              <li class="HP" value="attack"> <a href=""> Ataque</a></li>
+              <li class="HP" value="defense"> <a href=""> Defensa</a></li>
+              <li class="HP" value="magic"> <a href=""> Magia</a></li>
+              <li class="HP" value="difficulty"> <a href=""> Dificultad</a></li>
             </ul>
           </li>
+        </section>
         </ul>
       </nav>
     </header>

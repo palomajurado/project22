@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'Bangers',
-    cursive; */
-
   /*asegura que el relleno y el borde estén incluidos en el ancho y alto del total de la caja, así cuando se pone float ese borde es considerado para ser ubicado a la derecha*/
 }
 
@@ -18,19 +15,12 @@ body {
 #generalContainer {
   height: 100%;
   background-color: rgba(12, 12, 1, 0.632);
-  /* background-color: rgba(4, 4, 4, 0.173); */
   width: 100%;
-  /* max-width: 1000px; */
-  /*para que no se pase los 1000px de ancho y tener todo correctamente*/
   margin: auto;
   /*PROPIEDADES FLEX*/
   display: flex;
-  /*Al ser padre de todos los elementos, permite manipularlosfacilmente*/
-  /* es como si se pusiera*/
   flex-direction: column;
   flex-wrap: wrap;
-  /*si un elemento se baja cuando ya no ingresa en el width
-  */
   color: antiquewhite;
 }
 
@@ -39,7 +29,6 @@ body {
 }
 
 header {
-  /*al ser hijo y padre*/
   height: 100%;
   width: 100%;
   font-family: 'Bangers',
@@ -55,7 +44,6 @@ header {
 
 #logo {
   grid-auto-rows: auto;
-  /* border: 2px solid black; */
   display: grid;
   justify-items: center;
   margin-top: 6%;
@@ -90,64 +78,55 @@ header {
   padding: 0.1em;
   text-align: center;
 }
-
 #detail_logo {
   border: 2px solid black;
 }
-
 .detail_diamont_Riot {
   background-color: black;
   width: 100%;
   height: auto;
-
 }
-
 #detail_diamont_Riot1 {
   width: auto;
   height: 50%;
 }
-
 #detail_diamont_Riot2 {
   width: auto;
   height: 50%;
 }
-
-
 .buscadores {
   margin-top: 1%;
   margin-bottom: 4%;
-  /* border: 2px solid red; */
   width: 100%;
   height: 80%;
   padding: 0;
-  /* font-family: 'Bangers',
-    cursive; */
+  position: sticky;
+  top: 0;
 }
+
 
 ul,
 li {
   list-style: none;
-  /* width: 30%; */
 }
 
 .filtros {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  position: sticky;
+  top: 0%;
+  
 }
 
 .filtros li a {
-  /*todos los elementos a que esten dentro de li que estén dentro de filtros*/
-  /* background-color: black; */
   color: aliceblue;
   background-color: #464242;
   text-decoration: none;
-  /*se quita el subrayado*/
   padding: 0.2em;
   display: block;
   font-family: 'Righteous',
     cursive;
-  /*por que actualmente están en displayLine, por eso se ven juntos, ahora en bloque*/
   border-style: double;
   border-width: 8px;
   border-color: #B09D57;
@@ -172,15 +151,40 @@ li {
   font-family: 'Bangers',
     cursive;
   font-size: 1.2em;
-  /* color: #464242; */
   border-style: double;
   border-width: 8px;
   border-color: #282626;
-  /* padding-top: 0.00001em; */
   text-align: center;
-  /* align-content: center; */
   color: #464242;
 }
+#habilidad_popular{
+  float: left;
+  background-color: #B09D57;
+  width: 15em;
+  padding-top: 3%;
+  height: 2.5em;
+  border-radius: 2em;
+  font-family: 'Bangers',
+    cursive;
+  font-size: 1.2em;
+  border-style: double;
+  border-width: 8px;
+  border-color: #282626;
+  text-align: center;
+  color: #464242;
+  display: none;
+  animation: signal 1s infinite;
+}
+
+@keyframes signal {
+  0%{
+    box-shadow: 0 0 0 0 #B09D57;
+  }
+  100%{
+    box-shadow: 0 0 0 30px rgba(0, 0, 0, 0);
+  }
+}
+
 
 .filtros li ul {
   display: none;
@@ -195,8 +199,6 @@ li {
 
 .main {
   height: 100%;
-  /* border: 2px solid white; */
-  /* background-color: rgba(12, 12, 1, 0.632); */
 }
 
 #root {
@@ -211,7 +213,6 @@ li {
 .nameOfChampion {
   font-size: 20px;
   text-align: center;
-  /* margin-bottom: 10%; */
   background-color: rgb(52, 55, 66);
   font-family: 'Righteous',
     cursive;
@@ -251,16 +252,11 @@ footer {
 }
 
 #play_links {
-  /* display: grid;
-  grid-template-columns: 50% 50%; */
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   text-align-last: end;
   margin-top: 2%;
   margin-left: 6%;
-  /* width: auto;
-  height: auto; */
 }
 
 #img_Riot {
@@ -274,28 +270,16 @@ footer {
 }
 
 #final_information {
-  /* display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-between; */
   text-align: center;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   font-family: 'Righteous',
     cursive;
   font-size: 11px;
   color: #7e7e7e;
-  /* border: 2px solid greenyellow; */
   line-height: 200%;
-  /* max-width: 500px */
 }
 
 #gitHub {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   align-items: center;
-  /* border: 2px solid yellow; */
   width: auto;
   height: 50px;
   background-color: #B09D57;
