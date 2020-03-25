@@ -7,9 +7,14 @@
 
 html,
 body {
-  background-image: url(assets/background.jpg);
+  background-image: url(assets/background1.jpg);
   background-size: inherit;
   color: lavenderblush;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  /*esto es para hacerlo responsive :) */
+  background-position: center;
 }
 
 #generalContainer {
@@ -39,7 +44,6 @@ header {
   width: 50%;
   justify-content: center;
   padding-bottom: 4%;
-
 }
 
 #logo {
@@ -82,7 +86,6 @@ header {
   border: 2px solid black;
 }
 .detail_diamont_Riot {
-  background-color: black;
   width: 100%;
   height: auto;
 }
@@ -109,7 +112,25 @@ ul,
 li {
   list-style: none;
 }
-
+#searchTexto {
+  float: left;
+  background-color: #B09D57;
+  width: 15em;
+  padding-top: 0.5%;
+  height: 2.5em;
+  border-radius: 2em;
+  font-family: 'Bangers',
+    cursive;
+  font-size: 1.2em;
+  /* color: #464242; */
+  border-style: double;
+  border-width: 8px;
+  border-color: #282626;
+  /* padding-top: 0.00001em; */
+  text-align: center;
+  /* align-content: center; */
+  color: #464242;
+}
 .filtros {
   display: flex;
   flex-wrap: wrap;
@@ -253,10 +274,15 @@ footer {
 
 #play_links {
   display: flex;
+  width: auto;
+  height: auto;
   flex-direction: row;
   text-align-last: end;
-  margin-top: 2%;
-  margin-left: 6%;
+  margin: auto;
+  padding-top: 5%;
+  padding-left: 20%;
+  padding-right: 20%;
+
 }
 
 #img_Riot {
