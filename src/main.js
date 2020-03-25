@@ -4,41 +4,16 @@ import {
 } from './data.js';
 import lol from './data/lol/lol.js';
 
-const allChampionList = lol.data;
 
-const divContador = document.getElementById('contador');
-const buttonAllChampions = document.getElementById('button_colection');
 
-export const generalData=(data) =>{  
-  let muestra = ''
-  data.forEach((champion) => {
-    const elements=()=>{
-    const div = document.createElement('div');
-    const img = document.createElement('img');
-    const p = document.createElement('p');
-    p.className = 'nameOfChampion';
-    img.className = 'imageOfChampion';
-    p.innerHTML = `${champion.name}`;
-    img.src = `${champion.splash}`;
-    div.appendChild(img);
-    div.appendChild(p);
-    list.appendChild(div);
-  }
-  muestra += elements;
-});
-return muestra;
-}
 
-const list = document.querySelector('#root');
-  list.innerHTML = ''; 
-  
-  buttonAllChampions.addEventListener('click', () => {
-  habilidad_popular.style.display="none";
-  const list = document.querySelector('#root');
-  list.innerHTML = ''; 
-  generalData(allChampionList);  
-   
-});
+
+
+
+
+
+
+
 
 
 const liRoles = document.querySelectorAll('.Roles');
