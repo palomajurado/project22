@@ -73,8 +73,6 @@ describe('searchByName', () => {
     const search = searchByName(dataLol, '+');
     expect(search).toHaveLength(0);
   });
-
-
   it('debería retornar rol Tank', () => {
     const filterRol = allSelection(champions, 'Tank');
     expect(filterRol).toHaveLength(40);

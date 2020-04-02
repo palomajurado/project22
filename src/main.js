@@ -6,7 +6,9 @@ import {
 // eslint-disable-next-line import/named
 // eslint-disable-next-line import/extensions
 } from './data.js';
+
 // eslint-disable-next-line import/extensions
+} from './data.js';
 import lol from './data/lol/lol.js';
 
 const allChampionList = lol.data;
@@ -44,6 +46,7 @@ const champions = (array) => {
     divContador.innerHTML = 'Campeones : 122';
   });
 };
+
 buttonAllChampions.addEventListener('click', (event) => {
   event.preventDefault();
   popularHability.style.display = 'none';
@@ -99,6 +102,7 @@ liRoles.forEach((option) => {
     if (attributeLi === 'roles') {
       typeRol = option.getAttribute('data-value');
       list.innerHTML = '';
+
       const arrCampeonesPorRol = allSelection(dataLol, typeRol);
       // console.log(arrCampeonesPorRol);
       championsRol(arrCampeonesPorRol);
@@ -167,3 +171,4 @@ menuResponsive.addEventListener('click', () => {
 //     filtros.style.display = 'block';
 //   }
 // });
+
