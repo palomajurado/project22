@@ -1,6 +1,8 @@
+/* eslint-disable import/extensions */
 import {
   allSelection,
 // eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/extensions
 } from '../src/data.js';
 
 import lol from '../src/data/lol/lol.js';
@@ -24,16 +26,4 @@ it('debería retornar rol Tank', () => {
 it('debería retornar rol Fighter', () => {
   const filterRol = allSelection(champions, 'Fighter');
   expect(filterRol).toHaveLength(66);
-});
-it('debería retornar rol Apoyo', () => {
-  const filterRol = allSelection(champions, 'Support');
-  expect(filterRol).toHaveLength(27);
-});
-it('debería retornar rol Tirador', () => {
-  const filterRol = allSelection(champions, 'Marksman');
-  expect(filterRol).toHaveLength(24);
-});
-it('debería retornar rol Asesino', () => {
-  const filterRol = allSelection(champions, 'Assassin');
-  expect(filterRol).toHaveLength(33);
 });
