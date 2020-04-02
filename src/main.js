@@ -1,8 +1,16 @@
-/* interacción con el DOM event listeners o event handlers, se usan las que estàn en data.js */
-// eslint-disable-next-line import/extensions
-import { allSelection, sortOrder } from './data.js';
-// eslint-disable-next-line import/extensions
+
+/* eslint-disable array-callback-return */
+import {
+  // eslint-disable-next-line import/named
+  allSelection, searchByName, sortOrder
+// eslint-disable-next-line import/named
+} from './data.js';
 import lol from './data/lol/lol.js';
+
+const allChampionList = lol.data;
+const dataLol = Object.values(allChampionList);
+// eslint-disable-next-line no-alert
+// alert(Array.isArray(arr));
 
 const list = document.querySelector('#root');
 const generalContainer = document.getElementById('generalContainer');
@@ -15,13 +23,16 @@ buttonWelcome.addEventListener('click', () => {
   generalContainer.style.display = 'block';
 });
 
-
-const allChampionList = lol.data;
-const arr = Object.values(allChampionList);
+buttonAllChampions.addEventListener('click', (event) => {
+  event.preventDefault();
+  popularHability.style.display = 'none';
+  list.innerHTML = '';
+  champions(dataLol);
+  divContador.innerHTML = `All Champions List ${dataLol.length}`;
+});
 
 const divContador = document.getElementById('contador');
-
-
+const list = document.querySelector('#root');
 const buttonAllChampions = document.getElementById('button_colection');
 const champions = (array) => {
   Object.values(array).forEach((champion) => {
@@ -35,18 +46,18 @@ const champions = (array) => {
     div.appendChild(img);
     div.appendChild(p);
     list.appendChild(div);
-    divContador.innerHTML = 'Campeones: 122';
+    divContador.innerHTML = 'Campeones : 122';
   });
 };
-// champions(arr);
-buttonAllChampions.addEventListener('click', (event) => {
-  popularHability.style.display = 'none';
-  event.preventDefault();
-  list.innerHTML = '';
-  champions(arr);
-  divContador.innerHTML = `All Champions List ${arr.length}`;
-});
 
+const inputSearch = document.getElementById('searchTexto');
+inputSearch.addEventListener('keyup', (event) => {
+  list.innerHTML = '';
+  const valueToSearch = event.target.value;
+  const contador = searchByName(dataLol, valueToSearch);
+  champions(searchByName(dataLol, valueToSearch));
+  divContador.innerHTML = (`Encontrados: ${contador.length}`);
+});
 
 const championsRol = (array, type) => {
   Object.values(array).forEach((champion) => {
@@ -87,7 +98,7 @@ liRoles.forEach((option) => {
     if (attributeLi === 'roles') {
       typeRol = option.getAttribute('data-value');
       list.innerHTML = '';
-      const arrCampeonesPorRol = allSelection(arr, typeRol);
+      const arrCampeonesPorRol = allSelection( dataLol, typeRol);
       // console.log(arrCampeonesPorRol);
       championsRol(arrCampeonesPorRol);
       // console.log(championsRol(arrCampeonesPorRol));
@@ -95,7 +106,7 @@ liRoles.forEach((option) => {
     } else if (attributeLi === 'hp') {
       const typeSkill = option.getAttribute('data-value');
       list.innerHTML = '';
-      const arrCampeonesPorRol = allSelection(arr, typeRol).sort((a, b) => b.info[typeSkill] - a.info[typeSkill]);
+      const arrCampeonesPorRol = allSelection(dataLol, typeRol).sort((a, b) => b.info[typeSkill] - a.info[typeSkill]);
       // console.log(typeSkill);
       championsRol(arrCampeonesPorRol, typeSkill);
       // console.log(championsRol(arrCampeonesPorRol));
@@ -105,15 +116,14 @@ liRoles.forEach((option) => {
 });
 
 const butonOrder = document.getElementById('alphabeticOrder');
-
 butonOrder.addEventListener('click', (event) => {
   const valueAlphabetic = event.target.value;
   switch (valueAlphabetic) {
     case 'a-z':
-      champions(sortOrder(arr, 'a-z'));
+      champions(sortOrder( dataLol, 'a-z'));
       break;
     case 'z-a':
-      champions(sortOrder(arr, valueAlphabetic).reverse());
+      champions(sortOrder( dataLol, valueAlphabetic).reverse());
       break;
     default:
   }
@@ -156,3 +166,4 @@ menuResponsive.addEventListener('click', () => {
 //     filtros.style.display = 'block';
 //   }
 // });
+
