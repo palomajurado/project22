@@ -30,22 +30,15 @@ body {
 }
 
 #welcomeGift {
-  background: url(./assets/welcome-Img.gif);
-  background-repeat: no-repeat;
-  display: block;
-  width: 100%;
-  height: 100%;
+  background: url(./assets/initialVideoLol.mp4);
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-around;
-  background-size: 100% 100%;
-  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  top : 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+  opacity: 85;
 }
 
 /*Con min-width, móvil primero y con max-width, de escritorio primero.*/
@@ -374,7 +367,7 @@ footer {
   border: 2px solid black;
   background-color: rgb(11, 11, 3);
   font-family: "Righteous", cursive;
-  align-content: absolute; ***
+  /* align-content: absolute; */
 }
 
 #play_links {
@@ -438,25 +431,21 @@ footer {
     margin-bottom: 22px;
   }
   #welcomeGift {
-    background: url(./assets/welcome-Img.gif);
-    background-repeat: no-repeat;
-    background-position: center;
+    background;
     position: fixed;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-around;
-    background-size: 100% 50%;
-    object-fit: cover;
-    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    top : 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    opacity: 85;
   }
-  #background-welcome-black{
+  /* #background-welcome-black{
     background-color: black;
     height: 100vh;
     width: auto;
-  }
+  } */
   
   /*Con min-width, móvil primero y con max-width, de escritorio primero.*/
   #words-Welcome {

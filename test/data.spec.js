@@ -3,6 +3,7 @@ import {
   allSelection, sortOrder, searchByName,
 // eslint-disable-next-line import/no-unresolved
 // eslint-disable-next-line import/extensions
+// eslint-disable-next-line import/named
 } from '../src/data.js';
 
 import lol from '../src/data/lol/lol.js';
@@ -73,20 +74,13 @@ describe('searchByName', () => {
     expect(search).toHaveLength(0);
   });
 
-  
-  
-  
-  
-  
-  
-  
-  
-it('debería retornar rol Tank', () => {
-  const filterRol = allSelection(champions, 'Tank');
-  expect(filterRol).toHaveLength(40);
-});
-it('debería retornar rol Fighter', () => {
-  const filterRol = allSelection(champions, 'Fighter');
-  expect(filterRol).toHaveLength(66);
 
+  it('debería retornar rol Tank', () => {
+    const filterRol = allSelection(champions, 'Tank');
+    expect(filterRol).toHaveLength(40);
+  });
+  it('debería retornar rol Fighter', () => {
+    const filterRol = allSelection(champions, 'Fighter');
+    expect(filterRol).toHaveLength(66);
+  });
 });
