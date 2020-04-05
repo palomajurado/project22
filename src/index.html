@@ -13,26 +13,31 @@
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-      <section id="welcome">
+      <section id="welcomeGift">
         <div id="video2">
             <video
-                id="welcomeGift"
-                src="./assets/initialVideoLol.mp4"
+                id="welcomeGift1"
+                src="./assets/intro1_LOL.mp4"
                 autoplay="autoplay"
                 muted="muted"
                 loop="loop"></video>
         </div>
-        <div>
+        <div id="black">
             <img id="img-lol" src="./assets/logo1.png" alt=""/>
             <p id="words-Welcome">
                 Whether you prefer to jump right into battle, support your teammates, or
                 something in between, there's a lucre for you in the rift.
             </p>
-            <button id="button-welcome">start</button>
+            
+            <a id="button-welcome">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+              start
+            </a>
         </div>
       </section>
-        <div id="background"></div>
-        <div id="background-welcome-black"></div>
         <div id="generalContainer">
             <header>
                 <div id="logo">
@@ -44,12 +49,9 @@
                         <div id="contador">Champions</div>
                     </div>
                     <div>
-                        <img class="detail_diamont_Riot" src="assets/detail1.png" alt=""/>
+                        <img id="detail_diamont_Riot" src="assets/detail1.png" alt=""/>
                     </div>
                     <nav class="buscadores">
-                        <nav id="menu">
-                            <span>&#9776;</span>
-                        </nav>
                         <ul class="filtros responsive" id="filtros">
                             <div id="search">
                                 <input
@@ -62,7 +64,7 @@
                                 Role
                                 <ul>
                                     <li class="Roles prueba" data-value="Fighter" data-tipo="roles">
-                                        <a id="filterFighters">
+                                        <a>
                                             Luchador</a>
                                     </li>
                                     <li class="Roles prueba" data-value="Mage" data-tipo="roles">
@@ -89,7 +91,7 @@
                                 </ul>
                             </li>
                             <li id="order" name="order">
-                                Order your selection
+                                Order by
                                 <ul id="alphabeticOrder">
                                     <li class="prueba" value="a-z" id="AtoZ">
                                         <a>

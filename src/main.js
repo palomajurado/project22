@@ -19,13 +19,12 @@ const list = document.querySelector('#root');
 
 const generalContainer = document.getElementById('generalContainer');
 const buttonWelcome = document.getElementById('button-welcome');
-const backgroundWelcomeBlack = document.getElementById('background-welcome-black');
 const popularHability = document.getElementById('habilidad_popular');
+const liRoles = document.querySelectorAll('.prueba');
 
 buttonWelcome.addEventListener('click', () => {
   const welcomeGift = document.getElementById('welcomeGift');
   welcomeGift.style.display = 'none';
-  backgroundWelcomeBlack.style.display = 'none';
   generalContainer.style.display = 'block';
 });
 
@@ -41,15 +40,18 @@ const champions = (array) => {
     div.appendChild(img);
     div.appendChild(p);
     list.appendChild(div);
-    divContador.innerHTML = 'Campeones : 122';
+
+    divContador.style.backgroundColor = '#316a99';
+    divContador.style.boxShadow = '0 0 10px #b3b4ab, 0 0 40px #b3b4ab, 0 0 80px #b3b4ab';
   });
 };
+
 buttonAllChampions.addEventListener('click', (event) => {
   event.preventDefault();
   popularHability.style.display = 'none';
   list.innerHTML = '';
   champions(dataLol);
-  divContador.innerHTML = `All Champions List ${dataLol.length}`;
+  divContador.innerHTML = `Champions List ${dataLol.length}`;
 });
 const inputSearch = document.getElementById('searchTexto');
 inputSearch.addEventListener('keyup', (event) => {
@@ -84,10 +86,15 @@ const championsRol = (array, type) => {
     p3 = type ? p3.style.display = 'block' : p3.style.display = 'none';
     p3 = type ? p2.style.marginBottom = '3px' : p.style.marginBottom = '3px';
     p3 = type ? p.style.marginBottom = '3px' : p.style.marginBottom = '3px';
+
+    divContador.style.backgroundColor = '#316a99';
+    divContador.style.boxShadow = '0 0 10px #b3b4ab, 0 0 40px #b3b4ab, 0 0 80px #b3b4ab';
   });
 };
 
-const liRoles = document.querySelectorAll('.prueba');
+
+/* LLAMANDO A LOS CAMPEONES SEGÚN ROL */
+
 // console.log(liRoles);
 let typeRol;/* '' o [] espera ese tipo,pero como está ahora solo recibe sin importar el tipo */
 
@@ -146,24 +153,8 @@ butonOrder.addEventListener('click', (event) => {
 //   champions(sortOrder(arr, selectOrder1).reverse());
 // });
 
-
-const menuResponsive = document.getElementById('menu');
-const filtros = document.getElementById('filtros');
-let meter = 0;
-
-menuResponsive.addEventListener('click', () => {
-  if (meter === 0) {
-    filtros.className = ('filtros responsive2');
-    meter = 1;
-  } else {
-    filtros.classList.remove('responsive2');
-    filtros.className = ('filtros responsive');
-    meter = 0;
-  }
-});
-
-// window.addEventListener('mouseup', (event) => {
-//   if (event.target != filtros) {
+// window.addEventListener('click', (event) => {
+//   if (event.target !== filtros) {
 //     filtros.style.display = 'block';
 //   }
 // });
