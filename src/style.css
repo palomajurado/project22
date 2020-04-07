@@ -17,7 +17,7 @@
  
 html,
 body {
-  font-family: 'Bangers', cursive;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 #welcomeGift1 {
@@ -139,7 +139,7 @@ background: linear-gradient(90deg,transparent,#2196f3);
 
 #generalContainer {
   background-image: url(assets/background1.jpg);
-  box-shadow: inset 0 0 0 1000px rgba(18, 18, 41, 0.733);
+  box-shadow: inset 0 0 0 1000px rgba(10, 10, 20, 0.733);
   /* background-color: cornsilk; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -163,7 +163,6 @@ background: linear-gradient(90deg,transparent,#2196f3);
 header {
   height: 100%;
   width: 100%;
-  font-family: "Bangers", cursive;
   z-index: 3;
 }
 
@@ -193,11 +192,11 @@ header {
 #button_colection,
 #contador {
   background-color: #b09d57;
+  font-family: 'Shadows Into Light', cursive;
   outline: none;
   width: 15em;
   height: 2em;
   border-radius: 2em;
-  font-family: "Bangers", cursive;
   font-size: 1.5em;
   color: #e2eaf5;
   border-style: double;
@@ -255,7 +254,6 @@ li {
   text-decoration: none;
   padding: 0.2em;
   display: block;
-  font-family: "Righteous", cursive;
   border-style: double;
   border-width: 8px;
   border-color: #b09d57;
@@ -311,10 +309,9 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   float: left;
   background-color: #b09d57;
   width: 20em;
-  padding-top: 0.5%;
+  /* padding-top: 0.5%; */
   height: 2.6em;
   font-size: 20px;
-  font-family: "Bangers", cursive;
   text-align: center;
   border-style: double;
   border-width: 8px;
@@ -335,9 +332,8 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   width: 15em;
   padding-top: 0.5%;
   height: 2.5em;
-  font-family: "Bangers", cursive;
   font-size: 1.2em;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.1em;
   border-style: double;
   border-width: 8px;
   text-align: center;
@@ -346,6 +342,11 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   border-left: 8px solid #b09d57;
   border-top: 8px solid #464242;
   border-bottom: 8px solid #464242;
+  background-image: url(./assets/iconfinder_Search.png);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: 38px 3px;
+  padding-left: 35px;
 }
 
 
@@ -356,7 +357,6 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   padding-top: 0.5%;
   height: 2.6em;
   font-size: 20px;
-  font-family: "Bangers", cursive;
   text-align: center;
   border-style: double;
   border-width: 8px;
@@ -404,14 +404,14 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
 
 .nameOfChampion {
   font-size: 20px;
-  text-align: center;
+  padding-left: 0.8em;
   background-color: #b09d57;  
-  font-family: "Righteous", cursive;
   color: white;
-  height: 2.5rem;
+  height: 1.5rem;
   width: 95%;
   align-content: center;
   margin-bottom: 60px;
+  padding-bottom: 36px;
 }
 
 .imageOfChampion {
@@ -434,25 +434,25 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   font-size: 20px;
   text-align: center;
   background-color: #c59a3e; 
-  font-family: "Righteous", cursive;
-  height: 3rem;
-  padding-top: 0.6rem;
+  height: 1.5rem;
   width: 95%;
   align-content: center;
-  margin-bottom: 30px;
   color: white;
+  margin-bottom: 60px;
+  margin-top: -40px;
+  padding-left: 8em;
 }
 .infoOfChampion {
   font-size: 20px;
   text-align: center;
   margin-bottom: 10%;
   background-color: #b09d57;  /* fallback for old browsers */
-  font-family: "Righteous", cursive;
-  height: 3rem;
-  padding-top: 0.6rem;
+  height: 1.5rem;
   width: 95%;
   align-content: center;
   color: white;
+  padding-bottom: 1.4em;
+  padding-left: 4em;
 }
 
 footer {
@@ -556,10 +556,7 @@ footer {
   margin-bottom: 20%;
   margin-top: 15%;
   }
-  #role{
-    width: 60px;
-    color: #e2eaf5;
-  }
+ 
   #logo_Lol {
     margin-top: 1em;
     margin-left: 40%;
@@ -575,7 +572,7 @@ footer {
   padding-left: 8%;
 }
 #contador{
-  margin: 0px 0px 0px 2px;
+  margin: 0px 0px 0px 8px;
   width: 160px;
   border-radius: 0;
   background: linear-gradient(#5a5f2f, #122230);
@@ -586,8 +583,8 @@ footer {
   border-right: transparent;
 }
 #button_colection{
-  margin: 0px 0px 0px 26px;
-  width: 160px;
+  margin: 0px 0px 0px 45px;
+  width: 120px;
   border-radius: 0;
   background: linear-gradient(#5a5f2f, #122230);
   color: #e2eaf5;
@@ -597,8 +594,10 @@ footer {
   border-left: transparent;
 }
 #buttons_colection_champions {
-  padding-top: 35%;
-  padding-right: 7%;
+  padding-top: 23%;
+  height: 30%;
+  width: 100%;
+  padding-left: 5% ;
   padding-bottom: 20px;
   justify-content: end;
   font-size: 0.7em;
@@ -611,6 +610,7 @@ footer {
   position: fixed;
   margin-top: 23%;
 }
+
 .filtros > li {
   background: linear-gradient(#5a5f2f, #122230);
   width: 110px;
@@ -621,28 +621,45 @@ footer {
   border-top: 2px solid #b09d57;
   border-left: 0;
   border-right: transparent;
+  margin-top: 50px;
+  margin-left: 21px;
 }
+#role{
+  width: 110px;
+} 
+#order{
+  margin-left: -5px;
+  width: 110px;
+}
+
 #searchTexto {
-  width: 90px;
-  border-radius: 0;
-  margin-left: 7px;
+  width: 8px;
+  margin-left: 20px;
+  margin-right: -210px;
   font-size: 0.9em;
-  background: linear-gradient(#5a5f2f, #122230);;
-  color:#e2eaf5;
+  background: linear-gradient(#5a5f2f, #122230);
+  color:#122230;
   border-bottom: 2px solid #b09d57;
   border-top: 2px solid #b09d57;
   border-right: transparent;
   border-left: transparent;
+  background-image: url(./assets/iconfinder_Search.png);
+  background-size: 23px;
+  background-repeat: no-repeat;
+  padding-left: 35px;
 }
+#searchTexto:focus{
+  background-color: rgb(227, 240, 240);
+  width: 190px;
+}
+
 #detail_diamont_Riot {
   width: 100%;
-  height: 2em;
-  
+  height: 2em; 
   padding-right: 80px;
   margin-top: 40%;
 }
 #habilidad_popular {
-  width: 110px;
   font-size: 0.92em;
   padding-top: 2%;
   border-radius: 0;
@@ -662,7 +679,9 @@ footer {
   height: 2.5em;
 
   text-align: center;
-  color: #e2eaf5;
+  width: 120px;
+    color: #e2eaf5;
+    margin-top: 50px;
 }
 
 
@@ -703,6 +722,9 @@ footer{
   font-size: 0.7rem;
   width: 7rem;
   float: right;
+}
+.imageOfChampion {
+  height: 17em;
 }
 
 }

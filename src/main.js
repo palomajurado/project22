@@ -28,6 +28,8 @@ buttonWelcome.addEventListener('click', () => {
   generalContainer.style.display = 'block';
 });
 
+popularHability.style.display = 'none';
+
 const champions = (array) => {
   Object.values(array).forEach((champion) => {
     const div = document.createElement('div');
@@ -48,7 +50,6 @@ const champions = (array) => {
 
 buttonAllChampions.addEventListener('click', (event) => {
   event.preventDefault();
-  popularHability.style.display = 'none';
   list.innerHTML = '';
   champions(dataLol);
   divContador.innerHTML = `Champions List ${dataLol.length}`;
@@ -112,9 +113,11 @@ liRoles.forEach((option) => {
       // console.log(championsRol(arrCampeonesPorRol));
       divContador.innerHTML = `${typeRol} ${arrCampeonesPorRol.length}`;
     } else if (attributeLi === 'hp') {
+      popularHability.style.animation = 'none';
       const typeSkill = option.getAttribute('data-value');
       list.innerHTML = '';
-      const arrCampeonesPorRol = allSelection(dataLol, typeRol).sort((a, b) => b.info[typeSkill] - a.info[typeSkill]);
+      const arrCampeonesPorRol = allSelection(dataLol, typeRol);
+      arrCampeonesPorRol.sort((a, b) => b.info[typeSkill] - a.info[typeSkill]);
       // console.log(typeSkill);
       championsRol(arrCampeonesPorRol, typeSkill);
       // console.log(championsRol(arrCampeonesPorRol));
@@ -123,19 +126,19 @@ liRoles.forEach((option) => {
   });
 });
 
-const butonOrder = document.getElementById('alphabeticOrder');
-butonOrder.addEventListener('click', (event) => {
-  const valueAlphabetic = event.target.value;
-  switch (valueAlphabetic) {
-    case 'a-z':
-      champions(sortOrder(dataLol, 'a-z'));
-      break;
-    case 'z-a':
-      champions(sortOrder(dataLol, valueAlphabetic).reverse());
-      break;
-    default:
-  }
-});
+// const butonOrder = document.getElementById('alphabeticOrder');
+// butonOrder.addEventListener('click', (event) => {
+//   const valueAlphabetic = event.target.value;
+//   switch (valueAlphabetic) {
+//     case 'a-z':
+//       champions(sortOrder(dataLol, 'a-z'));
+//       break;
+//     case 'z-a':
+//       champions(sortOrder(dataLol, valueAlphabetic).reverse());
+//       break;
+//     default:
+//   }
+// });
 
 // const butonOrder = document.getElementById('AtoZ');
 // butonOrder.addEventListener('click', (event) => {

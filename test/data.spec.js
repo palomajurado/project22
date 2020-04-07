@@ -36,8 +36,8 @@ describe('allSelection', () => {
     const filterRol = allSelection(champions, 'Marksman');
     expect(filterRol).toHaveLength(24);
   });
-  it('debería retornar rol Asesino', () => {
-    const filterRol = allSelection(champions, 'Assassin');
+  it('debería retornar habilidad popular', () => {
+    const filterRol = allSelection(champions, 'attack');
     expect(filterRol).toHaveLength(33);
   });
 });
@@ -72,15 +72,5 @@ describe('searchByName', () => {
   it('debería retornar (nada) para " + "(cualquier caracter', () => {
     const search = searchByName(dataLol, '+');
     expect(search).toHaveLength(0);
-  });
-
-
-  it('debería retornar rol Tank', () => {
-    const filterRol = allSelection(champions, 'Tank');
-    expect(filterRol).toHaveLength(40);
-  });
-  it('debería retornar rol Fighter', () => {
-    const filterRol = allSelection(champions, 'Fighter');
-    expect(filterRol).toHaveLength(66);
   });
 });
