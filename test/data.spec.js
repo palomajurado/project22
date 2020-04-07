@@ -73,4 +73,15 @@ describe('searchByName', () => {
     const search = searchByName(dataLol, '+');
     expect(search).toHaveLength(0);
   });
+<<<<<<< HEAD
+=======
+  it('debería retornar rol Tank', () => {
+    const filterRol = allSelection(champions, 'Tank');
+    expect(filterRol).toHaveLength(40);
+  });
+  it('debería retornar rol Fighter', () => {
+    const filterRol = allSelection(champions, 'Fighter');
+    expect(filterRol).toHaveLength(66);
+  });
+>>>>>>> 2167758419f664524e1da4a72a93adc6959cb920
 });

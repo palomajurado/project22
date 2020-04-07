@@ -19,7 +19,6 @@ export const searchByName = (data, string) => {
     }
   }
   return newArray;
-};
 export const sortOrder = (arr, condition) => {
   if (condition === 'a-z') {
     arr.sort((a, b) => ((a.id > b.id) ? -1 : 1));
