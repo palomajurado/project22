@@ -8,7 +8,6 @@ export const allSelection = (allchampionList, typeRol) => {
   /* typeRol que le vamos a pasar, pero este tiene que existir, por tanto índice mayor a 0 */
 };
 
-
 export const searchByName = (data, string) => {
   const stringLower = string.toLowerCase();
   const newArray = [];

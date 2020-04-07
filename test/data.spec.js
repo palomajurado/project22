@@ -1,8 +1,7 @@
 /* eslint-disable import/extensions */
 import {
   allSelection, sortOrder, searchByName,
-// eslint-disable-next-line import/no-unresolved
-// eslint-disable-next-line import/extensions
+  // import/extensions eslint-disable-next-line import/named
 // eslint-disable-next-line import/named
 } from '../src/data.js';
 
@@ -42,7 +41,6 @@ describe('allSelection', () => {
   });
 });
 
-
 describe('sortOrder', () => {
   it('is a function', () => {
     expect(typeof sortOrder).toBe('function');
@@ -73,15 +71,4 @@ describe('searchByName', () => {
     const search = searchByName(dataLol, '+');
     expect(search).toHaveLength(0);
   });
-<<<<<<< HEAD
-=======
-  it('debería retornar rol Tank', () => {
-    const filterRol = allSelection(champions, 'Tank');
-    expect(filterRol).toHaveLength(40);
-  });
-  it('debería retornar rol Fighter', () => {
-    const filterRol = allSelection(champions, 'Fighter');
-    expect(filterRol).toHaveLength(66);
-  });
->>>>>>> 2167758419f664524e1da4a72a93adc6959cb920
 });

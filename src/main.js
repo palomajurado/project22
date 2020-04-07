@@ -1,3 +1,4 @@
+
 /* eslint-disable import/named */
 /* eslint-disable array-callback-return */
 import {
@@ -6,9 +7,7 @@ import {
 // eslint-disable-next-line import/named
 // eslint-disable-next-line import/extensions
 } from './data.js';
-
 // eslint-disable-next-line import/extensions
-} from './data.js';
 import lol from './data/lol/lol.js';
 
 const allChampionList = lol.data;
@@ -109,7 +108,6 @@ liRoles.forEach((option) => {
     if (attributeLi === 'roles') {
       typeRol = option.getAttribute('data-value');
       list.innerHTML = '';
-
       const arrCampeonesPorRol = allSelection(dataLol, typeRol);
       // console.log(arrCampeonesPorRol);
       championsRol(arrCampeonesPorRol);
@@ -164,4 +162,3 @@ liRoles.forEach((option) => {
 //     filtros.style.display = 'block';
 //   }
 // });
-
