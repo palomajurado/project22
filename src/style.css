@@ -4,16 +4,6 @@
   box-sizing: border-box;
   /*asegura que el relleno y el borde estén incluidos en el ancho y alto del total de la caja, así cuando se pone float ese borde es considerado para ser ubicado a la derecha*/
 }
- video{
-   position: fixed;
-   min-width: 100%;
-   min-height: 100%;
-   top : 50%;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-   z-index: -1;
-   opacity: 85;
- }
  
 html,
 body {
@@ -24,7 +14,6 @@ body {
   color: lavenderblush;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-size: cover; */
   /*esto es para hacerlo responsive :) */
   background-position: center;
 }
@@ -65,9 +54,13 @@ body {
 #img-list{
   width: 60em;
   height: auto;
-  margin-left: 70%;
   margin-bottom: 40px;
+  display: block;
+  position: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 #background-welcome-black{
   background-color: black;
 }
@@ -254,13 +247,12 @@ li {
   border-color: #282626;
   text-align: center;
   color: #464242;
-
-
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
   padding: 4px 0;
   transition: 0.7s ease-out;
 }
+
 #habilidad_popular {
   float: left;
   background-color: #b09d57;
@@ -348,20 +340,38 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   align-content: center;
   margin-bottom: 30px;
 }
-.infoOfChampion {
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 10%;
-  background-color: #373B44;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  ;
-  font-family: "Righteous", cursive;
-  height: 3rem;
-  padding-top: 0.6rem;
+.imageChampion{
+  border-radius: 23px;
   width: 95%;
-  align-content: center;
+  height: 14rem;
+  border-color: currentColor;
+  float: right;
 }
+.infoChampion {
+  color: #ffbf00;
+  font-size: larger;
+  text-align: center;
+  margin-top: 29%;
+  margin-left: 16%;
+  margin-right: 30%;
+  overflow-wrap: normal;
+  font-family: 'Shadows Into Light', cursive;
+  height: 3rem;
+  align-content: right;
+  position: absolute;
+}
+#graphicChart{
+  width: 50%;
+  margin-top: -0;
+  margin-left: auto;
+}
+#calculationGraph{
+  height:400px;
+  width:content-box;
+}
+/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}
+.chartjs-render-monitor{animation:chartjs-render-animation 1ms};
 
 footer {
   border: 2px solid black;
@@ -431,7 +441,6 @@ footer {
     margin-bottom: 22px;
   }
   #welcomeGift {
-    background;
     position: fixed;
     min-width: 100%;
     min-height: 100%;

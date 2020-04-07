@@ -1,8 +1,7 @@
 /* eslint-disable import/extensions */
 import {
   allSelection, sortOrder, searchByName,
-// eslint-disable-next-line import/no-unresolved
-// eslint-disable-next-line import/extensions
+  // import/extensions eslint-disable-next-line import/named
 // eslint-disable-next-line import/named
 } from '../src/data.js';
 
@@ -41,7 +40,6 @@ describe('allSelection', () => {
     expect(filterRol).toHaveLength(33);
   });
 });
-
 
 describe('sortOrder', () => {
   it('is a function', () => {

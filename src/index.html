@@ -10,26 +10,26 @@
         <link
             href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap"
             rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" 
+            rel="stylesheet">
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
       <section id="welcome">
-        <div id="video2">
-            <video
+          <div id="video2">
+               <video
                 id="welcomeGift"
                 src="./assets/initialVideoLol.mp4"
                 autoplay="autoplay"
                 muted="muted"
                 loop="loop"></video>
-        </div>
-        <div>
+          </div>
             <img id="img-lol" src="./assets/logo1.png" alt=""/>
             <p id="words-Welcome">
                 Whether you prefer to jump right into battle, support your teammates, or
                 something in between, there's a lucre for you in the rift.
             </p>
             <button id="button-welcome">start</button>
-        </div>
       </section>
         <div id="background"></div>
         <div id="background-welcome-black"></div>
@@ -40,7 +40,7 @@
                 </div>
                 <div id='content_buttons'>
                     <div id="buttons_colection_champions">
-                        <input id="button_colection" type="button" value="Colection"/>
+                        <input id="button_colection" type="button" value="Collection"/>
                         <div id="contador">Champions</div>
                     </div>
                     <div>
@@ -140,8 +140,13 @@
             </header>
             <div class="main">
                 <section class="all_Champions">
-                    <div id="root">
-                        <img id="img-list" src="./assets/list.-champion.gif">
+                    <div id = "root">
+                    </div>
+         </div>
+                   <div id="graphicChart">
+                    <canvas id='calculationGraph' class="chartjs-render-monitor" 
+                    style="display: block"> </canvas> </div>
+                 <img id="img-list" src="./assets/list.-champion.gif">
                     </div>
                     <div id="filterToSearch" class=""></div>
                 </section>
@@ -185,6 +190,7 @@
                 </footer>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
         <script src=" main.js" type="module"></script>
     </body>
 </html>
