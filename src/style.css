@@ -4,16 +4,6 @@
   box-sizing: border-box;
   /*asegura que el relleno y el borde estén incluidos en el ancho y alto del total de la caja, así cuando se pone float ese borde es considerado para ser ubicado a la derecha*/
 }
- video{
-   position: fixed;
-   min-width: 100%;
-   min-height: 100%;
-   top : 50%;
-   left: 50%;
-   transform: translateX(-50%) translateY(-50%);
-   z-index: -1;
-   opacity: 85;
- }
  
 html,
 body {
@@ -132,10 +122,12 @@ background: linear-gradient(90deg,transparent,#2196f3);
 #img-list{
   width: 40em;
   height: auto;
-  margin-left: 70%;
   margin-bottom: 40px;
+  display: block;
+  position: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 #generalContainer {
   background-image: url(assets/background1.jpg);
@@ -349,7 +341,6 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   padding-left: 35px;
 }
 
-
 #habilidad_popular {
   float: left;
   background-color: #b09d57;
@@ -442,7 +433,41 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   margin-top: -40px;
   padding-left: 8em;
 }
-.infoOfChampion {
+.imageChampion{
+  border-radius: 23px;
+  width: 95%;
+  height: 14rem;
+  border-color: currentColor;
+  float: right;
+}
+.infoChampion {
+  color: #ffbf00;
+  font-size: larger;
+  text-align: center;
+  margin-top: 29%;
+  margin-left: 16%;
+  margin-right: 30%;
+  overflow-wrap: normal;
+  font-family: 'Shadows Into Light', cursive;
+  height: 3rem;
+  align-content: right;
+  position: absolute;
+}
+#graphicChart{
+  width: 50%;
+  margin-top: -0;
+  margin-left: auto;
+}
+#calculationGraph{
+  height:400px;
+  width:content-box;
+}
+
+/* Chart.js */
+@keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}
+.chartjs-render-monitor{animation:chartjs-render-animation 1ms};
+
+.infoOfChampion{
   font-size: 20px;
   text-align: center;
   margin-bottom: 10%;
@@ -515,13 +540,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
 @media only  screen and (max-width: 375px) { 
   #button-welcome {
     margin-left: 1em;
@@ -530,6 +548,16 @@ footer {
     margin-top: 2px;
     padding-top: 1px;
     margin-bottom: 22px;
+  }
+  #welcomeGift1 {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top : 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    opacity: 85;
   }
   /*Con min-width, móvil primero y con max-width, de escritorio primero.*/
   #words-Welcome {

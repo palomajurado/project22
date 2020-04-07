@@ -1,13 +1,11 @@
 
 /* eslint-disable import/named */
-/* eslint-disable array-callback-return */
+/* eslint-disable import/extensions */
 import {
-  // eslint-disable-next-line import/named
-  allSelection, searchByName, sortOrder,
-// eslint-disable-next-line import/named
-// eslint-disable-next-line import/extensions
+  allSelection,
+  searchByName,
+  sortOrder,
 } from './data.js';
-// eslint-disable-next-line import/extensions
 import lol from './data/lol/lol.js';
 
 const allChampionList = lol.data;
@@ -15,18 +13,23 @@ const dataLol = Object.values(allChampionList);
 const buttonAllChampions = document.getElementById('button_colection');
 const divContador = document.getElementById('contador');
 const list = document.querySelector('#root');
-// eslint-disable-next-line no-alert
-// alert(Array.isArray(arr));
-
 const generalContainer = document.getElementById('generalContainer');
 const buttonWelcome = document.getElementById('button-welcome');
 const popularHability = document.getElementById('habilidad_popular');
+const allButtons = document.getElementById('content_buttons');
+const gifChampion = document.getElementById('img-list');
+const firstPage = document.getElementById('welcomeGift');
+const ctx = document.getElementById('calculationGraph').getContext('2d');
+const canvasCalculationGraph = document.getElementById('calculationGraph');
+
 const liRoles = document.querySelectorAll('.prueba');
 
 buttonWelcome.addEventListener('click', () => {
-  const welcomeGift = document.getElementById('welcomeGift');
+  const welcomeGift = document.getElementById('welcomeGift1');
+  firstPage.style.display = 'none';
   welcomeGift.style.display = 'none';
   generalContainer.style.display = 'block';
+  canvasCalculationGraph.style.display = 'none';
 });
 
 popularHability.style.display = 'none';
@@ -43,7 +46,81 @@ const champions = (array) => {
     div.appendChild(img);
     div.appendChild(p);
     list.appendChild(div);
-
+    divContador.innerHTML = 'Campeones : 122';
+    img.addEventListener('click', () => {
+      gifChampion.style.display = 'none';
+      allButtons.innerHTML = '';
+      buttonAllChampions.style.display = 'block';
+      list.innerHTML = '';
+      canvasCalculationGraph.style.display = 'block';
+      const divForInfoChampion = document.createElement('div');
+      const infoChampion = document.createElement('p');
+      const imageChampion = document.createElement('img');
+      // const chartArea = document.createElement('canvas');
+      infoChampion.className = 'infoChampion';
+      imageChampion.className = 'imageChampion';
+      infoChampion.innerHTML = `${champion.blurb}`;
+      imageChampion.src = `${champion.splash}`;
+      divForInfoChampion.appendChild(infoChampion);
+      divForInfoChampion.appendChild(imageChampion);
+      list.appendChild(divForInfoChampion);
+      // in this section the constants store numerical data to be used in the statistical graph
+      const utilidad = (parseFloat(`${champion.stats.armor}`) + parseFloat(`${champion.stats.armorperlevel}`)
+      + parseFloat(`${champion.stats.attackdamage}`) + parseFloat(`${champion.stats.attackdamageperlevel}`)
+      + parseFloat(`${champion.stats.attackrange}`)) / 5;
+      const daño = (parseFloat(`${champion.stats.crit}`) + parseFloat(`${champion.stats.critperlevel}`)) / 2;
+      const dureza = (parseFloat(`${champion.stats.hp}`) + parseFloat(`${champion.stats.hpperlevel}`)
+      + parseFloat(`${champion.stats.hpregen}`) + parseFloat(`${champion.stats.hpregenperlevel}`)) / 4;
+      const movilidad = (parseFloat(`${champion.stats.movespeed}`) + parseFloat(`${champion.stats.attackspeedoffset}`)
+      + parseFloat(`${champion.stats.attackspeedperlevel}`)) / 3;
+      const controlDeMasas = (parseFloat(`${champion.stats.mp}`) + parseFloat(`${champion.stats.mpperlevel}`)
+      + parseFloat(`${champion.stats.mpregen}`) + parseFloat(`${champion.stats.mpregenperlevel}`)
+      + parseFloat(`${champion.stats.spellblock}`) + parseFloat(`${champion.stats.spellblockperlevel}`)) / 6;
+      const calculationGraph = new Chart(ctx, {
+        type: 'polarArea',
+        data: {
+          datasets: [{
+            data: [
+              `${utilidad}`,
+              `${daño}`,
+              `${dureza}`,
+              `${movilidad}`,
+              `${controlDeMasas}`,
+            ],
+            backgroundColor: [
+              '#f1c40f',
+              '#e67e22',
+              '#16a085',
+              '#2980b9',
+              '#a6d4f2',
+            ],
+            label: 'DataOfChampions', // for legend
+          }],
+          labels: [
+            'utilidad',
+            'daño',
+            'dureza',
+            'movilidad',
+            'control de masas',
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          legend: {
+            position: 'right',
+          },
+          title: {
+            display: true,
+            text: 'DataOfChampions',
+          },
+          animation: {
+            animateRotate: true,
+            animateScale: true,
+          },
+        },
+      });
+    });
     divContador.style.backgroundColor = '#316a99';
     divContador.style.boxShadow = '0 0 10px #b3b4ab, 0 0 40px #b3b4ab, 0 0 80px #b3b4ab';
   });
@@ -78,7 +155,9 @@ const championsRol = (array, type) => {
     img.src = `${champion.splash}`;
     p.innerHTML = `${champion.name}`;
     p2.innerHTML = `${champion.tags}`;
-    p3.innerHTML = type ? `${type} ${champion.info[type]}` : '';
+    p3.innerHTML = type
+      ? `${type} ${champion.info[type]}`
+      : '';
     div.appendChild(img);
     div.appendChild(p);
     list.appendChild(div);
@@ -104,14 +183,11 @@ liRoles.forEach((option) => {
   option.addEventListener('click', () => {
     popularHability.style.display = 'block';
     const attributeLi = option.getAttribute('data-tipo');
-    // console.log(attributeLi);
     if (attributeLi === 'roles') {
       typeRol = option.getAttribute('data-value');
       list.innerHTML = '';
       const arrCampeonesPorRol = allSelection(dataLol, typeRol);
-      // console.log(arrCampeonesPorRol);
       championsRol(arrCampeonesPorRol);
-      // console.log(championsRol(arrCampeonesPorRol));
       divContador.innerHTML = `${typeRol} ${arrCampeonesPorRol.length}`;
     } else if (attributeLi === 'hp') {
       popularHability.style.animation = 'none';
@@ -121,10 +197,27 @@ liRoles.forEach((option) => {
       arrCampeonesPorRol.sort((a, b) => b.info[typeSkill] - a.info[typeSkill]);
       // console.log(typeSkill);
       championsRol(arrCampeonesPorRol, typeSkill);
-      // console.log(championsRol(arrCampeonesPorRol));
       divContador.innerHTML = `${typeRol} ${arrCampeonesPorRol.length}`;
     }
   });
+});
+
+
+const butonOrder = document.getElementById('AtoZ');
+butonOrder.addEventListener('click', (event) => {
+  event.preventDefault();
+  // return seeAllChampion.innerHTML.sort().reverse();
+  const selectOrder = butonOrder.value;
+  list.innerHTML = '';
+  champions(sortOrder(dataLol, selectOrder));
+});
+const butonOrder1 = document.getElementById('ZtoA');
+butonOrder1.addEventListener('click', (event) => {
+  event.preventDefault();
+  // return seeAllChampion.innerHTML.sort().reverse();
+  const selectOrder1 = butonOrder1.value;
+  list.innerHTML = '';
+  champions(sortOrder(dataLol, selectOrder1).reverse());
 });
 
 // const butonOrder = document.getElementById('alphabeticOrder');
@@ -141,24 +234,3 @@ liRoles.forEach((option) => {
 //   }
 // });
 
-// const butonOrder = document.getElementById('AtoZ');
-// butonOrder.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const selectOrder = butonOrder.value;
-//   list.innerHTML = '';
-//   champions(sortOrder(arr, selectOrder));
-// });
-
-// const butonOrder1 = document.getElementById('ZtoA');
-// butonOrder1.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   const selectOrder1 = butonOrder1.value;
-//   list.innerHTML = '';
-//   champions(sortOrder(arr, selectOrder1).reverse());
-// });
-
-// window.addEventListener('click', (event) => {
-//   if (event.target !== filtros) {
-//     filtros.style.display = 'block';
-//   }
-// });
