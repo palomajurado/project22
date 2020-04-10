@@ -131,7 +131,7 @@ background: linear-gradient(90deg,transparent,#2196f3);
 
 #generalContainer {
   background-image: url(assets/background1.jpg);
-  box-shadow: inset 0 0 0 1000px rgba(10, 10, 20, 0.733);
+  box-shadow: inset 0 0 0 1000px rgba(42, 42, 78, 0.671);
   /* background-color: cornsilk; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -392,6 +392,11 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   padding-left: 6%;
   padding-right: 5%;
 }
+#newSpace {
+ border: 2px solid black;
+ background-color: yellowgreen;
+
+}
 
 .nameOfChampion {
   font-size: 20px;
@@ -445,7 +450,6 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   font-size: larger;
   text-align: center;
   margin-top: 29%;
-  margin-left: 16%;
   margin-right: 30%;
   overflow-wrap: normal;
   font-family: 'Shadows Into Light', cursive;
@@ -453,14 +457,23 @@ box-shadow: 0 0 10px #195d94, 0 0 40px #195d94, 0 0 80px #195d94;
   align-content: right;
   position: absolute;
 }
-#graphicChart{
-  width: 50%;
-  margin-top: -0;
-  margin-left: auto;
+#returnMain{
+  display: none;
 }
-#calculationGraph{
+#graphicChart{
+  display: none;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  /* background-color: red; */
+}
+/* #calculationGraph{
   height:400px;
   width:content-box;
+} */
+
+canvas{
+  height: 500px;
 }
 
 /* Chart.js */
@@ -541,6 +554,9 @@ footer {
 
 
 @media only  screen and (max-width: 375px) { 
+  #graphicChart{
+    display: none;
+  }
   #button-welcome {
     margin-left: 1em;
     width: 220px;

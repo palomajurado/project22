@@ -10,8 +10,7 @@
         <link
             href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap"
             rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" 
-            rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&family=Shadows+Into+Light&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
@@ -24,12 +23,17 @@
                 muted="muted"
                 loop="loop"></video>
         </div>
+        <div id="black">
             <img id="img-lol" src="./assets/logo1.png" alt=""/>
             <p id="words-Welcome">
                 Whether you prefer to jump right into battle, support your teammates, or
                 something in between, there's a lucre for you in the rift.
             </p>
-            <button id="button-welcome">start</button>
+            
+            <a id="button-welcome">
+              start
+            </a>
+        </div>
       </section>
         <div id="generalContainer">
             <header>
@@ -58,27 +62,27 @@
                                 <ul>
                                     <li class="Roles prueba" data-value="Fighter" data-tipo="roles">
                                         <a>
-                                            Luchador</a>
+                                            Fighter</a>
                                     </li>
                                     <li class="Roles prueba" data-value="Mage" data-tipo="roles">
                                         <a>
-                                            Mago</a>
+                                            Mage</a>
                                     </li>
                                     <li class="Roles prueba" data-value="Tank" data-tipo="roles">
                                         <a>
-                                            Tanque</a>
+                                            Tank</a>
                                     </li>
                                     <li class="Roles prueba" data-value="Assassin" data-tipo="roles">
                                         <a>
-                                            Asesino</a>
+                                            Assassin</a>
                                     </li>
                                     <li class="Roles prueba" data-value="Marksman" data-tipo="roles">
                                         <a>
-                                            Tirador</a>
+                                            Marksman</a>
                                     </li>
                                     <li class="Roles prueba" data-value="Support" data-tipo="roles">
                                         <a>
-                                            Apoyo
+                                            Support
                                         </a>
                                     </li>
                                 </ul>
@@ -86,23 +90,15 @@
                             <li id="order" name="order">
                                 Order by
                                 <ul id="alphabeticOrder">
-                                    <li class="" value="a-z" id="AtoZ">
+                                    <li class="ordering" value="a-z" id="AtoZ">
                                         <a>
                                             A - Z
                                         </a>
                                     </li>
-                                    <li class="" value="z-a" id="ZtoA">
+                                    <li class="ordering" value="z-a" id="ZtoA">
                                         <a>
                                             Z - A
                                         </a>
-                                    </li>
-                                    <li class="">
-                                        <a href="">
-                                            Ascendente</a>
-                                    </li>
-                                    <li class="">
-                                        <a href="">
-                                            Descendente</a>
                                     </li>
                                 </ul>
                             </li>
@@ -112,19 +108,19 @@
                                     <ul>
                                         <li class="hp prueba" data-value="attack" data-tipo="hp">
                                             <a>
-                                                Ataque</a>
+                                                Attack</a>
                                         </li>
                                         <li class="hp prueba" data-value="defense" data-tipo="hp">
                                             <a>
-                                                Defensa</a>
+                                                Defense</a>
                                         </li>
                                         <li class="hp prueba" data-value="magic" data-tipo="hp">
                                             <a>
-                                                Magia</a>
+                                                Magic</a>
                                         </li>
                                         <li class="hp prueba" data-value="difficulty" data-tipo="hp">
                                             <a>
-                                                Dificultad</a>
+                                                Difficulty</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -135,18 +131,19 @@
             </header>
             <div class="main">
                 <section class="all_Champions">
-                    <div id = "root">
+                    <div id="root">
+                        <img id="img-list" src="./assets/list.-champion.gif">
                     </div>
-         </div>
-                   <div id="graphicChart">
-                    <canvas id='calculationGraph' class="chartjs-render-monitor" 
-                    style="display: block"> </canvas> </div>
-                 <img id="img-list" src="./assets/list.-champion.gif">
+                    <div id="graphicChart">
+                        <!-- <button id="returnMain"> Return </button> -->
+                        <canvas
+                            id='calculationGraph'
+                            class="chartjs-render-monitor"
+                            style="display: none"
+                            width="400" height="400"
+                            style = "background-color:red">
+                        </canvas>
                     </div>
-                    <div id="filterToSearch" class=""></div>
-                </section>
-                <section class="rol_fighter">
-                    <div id="rolesFighter"></div>
                 </section>
             </div>
             <div id="external-links">
