@@ -1,181 +1,161 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Data Lovers</title>
-        <meta charset="utf-8"/>
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"/>
-        <link rel="icon" href="assets/pinLol.png">
-        <link
-            href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap"
-            rel="stylesheet"/>
-            <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css"/>
-    </head>
-    <body>
-      <section id="welcomeGift">
+
+<head>
+    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="icon" href="assets/pinLol.png">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Righteous&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section id="welcomeGift">
         <div id="video2">
-            <video
-                id="welcomeGift1"
-                src="./assets/intro1_LOL.mp4"
-                autoplay="autoplay"
-                muted="muted"
-                loop="loop"></video>
+            <video id="welcomeGift1" src="./assets/intro1_LOL.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
         </div>
         <div id="black">
-            <img id="img-lol" src="./assets/logo1.png" alt=""/>
+            <img id="img-lol" src="./assets/logo1.png" alt="" />
             <p id="words-Welcome">
-                Whether you prefer to jump right into battle, support your teammates, or
-                something in between, there's a lucre for you in the rift.
+                Whether you prefer to jump right into battle, support your teammates, or something in between, there's a lucre for you in the rift.
             </p>
-            
+
             <a id="button-welcome">
               start
             </a>
         </div>
-      </section>
-        <div id="generalContainer">
-            <header>
-                <div id="logo">
-                    <img id="logo_Lol" src="assets/logo1.png" alt=""/>
+    </section>
+    <div id="generalContainer">
+        <header>
+            <div id="logo">
+                <img id="logo_Lol" src="assets/logo1.png" alt="" />
+            </div>
+            <div id="content_buttons">
+                <div id="buttons_colection_champions">
+                    <input id="button_colection" type="button" value="Collection" />
+                    <div id="contador">Champions</div>
                 </div>
-                <div id='content_buttons'>
-                    <div id="buttons_colection_champions">
-                        <input id="button_colection" type="button" value="Collection"/>
-                        <div id="contador">Champions</div>
-                    </div>
-                    <div>
-                        <img id="detail_diamont_Riot" src="assets/detail1.png" alt=""/>
-                    </div>
-                    <nav class="buscadores">
-                        <ul class="filtros responsive" id="filtros">
-                            <div id="search">
-                                <input
-                                    type="search"
-                                    id="searchTexto"
-                                    class="bar_menu_search"
-                                    placeholder="Search"/>
-                            </div>
-                            <li id="role">
-                                Role
-                                <ul>
-                                    <li class="Roles prueba" data-value="Fighter" data-tipo="roles">
-                                        <a>
+                <div>
+                    <img id="detail_diamont_Riot" src="assets/detail1.png" alt="" />
+                </div>
+                <nav class="buscadores">
+                    <ul class="filtros responsive" id="filtros">
+                        <div id="search">
+                            <input type="search" id="searchTexto" class="bar_menu_search" placeholder="Search" spellcheck="false" />
+                        </div>
+                        <li id="role">
+                            Role
+                            <ul>
+                                <li class="Roles prueba" data-value="Fighter" data-tipo="roles">
+                                    <a>
                                             Fighter</a>
-                                    </li>
-                                    <li class="Roles prueba" data-value="Mage" data-tipo="roles">
-                                        <a>
+                                </li>
+                                <li class="Roles prueba" data-value="Mage" data-tipo="roles">
+                                    <a>
                                             Mage</a>
-                                    </li>
-                                    <li class="Roles prueba" data-value="Tank" data-tipo="roles">
-                                        <a>
+                                </li>
+                                <li class="Roles prueba" data-value="Tank" data-tipo="roles">
+                                    <a>
                                             Tank</a>
-                                    </li>
-                                    <li class="Roles prueba" data-value="Assassin" data-tipo="roles">
-                                        <a>
+                                </li>
+                                <li class="Roles prueba" data-value="Assassin" data-tipo="roles">
+                                    <a>
                                             Assassin</a>
-                                    </li>
-                                    <li class="Roles prueba" data-value="Marksman" data-tipo="roles">
-                                        <a>
+                                </li>
+                                <li class="Roles prueba" data-value="Marksman" data-tipo="roles">
+                                    <a>
                                             Marksman</a>
-                                    </li>
-                                    <li class="Roles prueba" data-value="Support" data-tipo="roles">
-                                        <a>
+                                </li>
+                                <li class="Roles prueba" data-value="Support" data-tipo="roles">
+                                    <a>
                                             Support
                                         </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li id="order" name="order">
-                                Order by
-                                <ul id="alphabeticOrder">
-                                    <li class="ordering" value="a-z" id="AtoZ">
-                                        <a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="order" name="order">
+                            Order by
+                            <ul id="alphabeticOrder">
+                                <li class="ordering" data-value="az" id="AtoZ">
+                                    <a>
                                             A - Z
                                         </a>
-                                    </li>
-                                    <li class="ordering" value="z-a" id="ZtoA">
-                                        <a>
+                                </li>
+                                <li class="ordering" data-value="za" id="ZtoA">
+                                    <a>
                                             Z - A
                                         </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <section>
+                            <li id="habilidad_popular">
+                                Popular hability
+                                <ul>
+                                    <li class="hp prueba" data-value="attack" data-tipo="hp">
+                                        <a>
+                                                Attack</a>
+                                    </li>
+                                    <li class="hp prueba" data-value="defense" data-tipo="hp">
+                                        <a>
+                                                Defense</a>
+                                    </li>
+                                    <li class="hp prueba" data-value="magic" data-tipo="hp">
+                                        <a>
+                                                Magic</a>
+                                    </li>
+                                    <li class="hp prueba" data-value="difficulty" data-tipo="hp">
+                                        <a>
+                                                Difficulty</a>
                                     </li>
                                 </ul>
                             </li>
-                            <section>
-                                <li id="habilidad_popular">
-                                    Popular hability
-                                    <ul>
-                                        <li class="hp prueba" data-value="attack" data-tipo="hp">
-                                            <a>
-                                                Attack</a>
-                                        </li>
-                                        <li class="hp prueba" data-value="defense" data-tipo="hp">
-                                            <a>
-                                                Defense</a>
-                                        </li>
-                                        <li class="hp prueba" data-value="magic" data-tipo="hp">
-                                            <a>
-                                                Magic</a>
-                                        </li>
-                                        <li class="hp prueba" data-value="difficulty" data-tipo="hp">
-                                            <a>
-                                                Difficulty</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </section>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            <div class="main">
-                <section class="all_Champions">
-                    <div id="root">
-                        <img id="img-list" src="./assets/list.-champion.gif">
-                    </div>
-                    <div id="graphicChart">
-                        <!-- <button id="returnMain"> Return </button> -->
-                        <canvas
-                            id='calculationGraph'
-                            class="chartjs-render-monitor"
-                            style="display: none"
-                            width="400" height="400"
-                            style = "background-color:red">
-                        </canvas>
-                    </div>
-                </section>
+                        </section>
+                    </ul>
+                </nav>
             </div>
-            <div id="external-links">
-                <footer>
-                    <div id="play_links">
-                        <a href="https://www.riotgames.com/en" class="nav_link" target="blank">
-                            <img id="img_Riot" src="assets/logoRiot.jpg" alt=""/></a>
+        </header>
+        <div class="main">
+            <section class="all_Champions">
+                <div id="root">
+                    <img id="img-list" src="./assets/list.-champion.gif">
+                </div>
+                <div id="graphicChart">
 
-                        <a href="https://www.esrb.org/ratings-guide/" class="nav_link" target="blank">
-                            <img id="img_ratings" src="assets/logoTfooter.png" alt=""/></a>
+                    <canvas id="calculationGraph" class="chartjs-render-monitor"></canvas>
+                </div>
+                <button id="returnMain"> Return </button>
+            </section>
+        </div>
+        <div id="external-links">
+            <footer>
+                <div id="play_links">
+                    <a href="https://www.riotgames.com/en" class="nav_link" target="blank">
+                        <img id="img_Riot" src="assets/logoRiot.jpg" alt="" /></a>
+
+                    <a href="https://www.esrb.org/ratings-guide/" class="nav_link" target="blank">
+                        <img id="img_ratings" src="assets/logoTfooter.png" alt="" /></a>
+                </div>
+                <div>
+                    <img class="detail_diamont_Riot" src="assets/detail1.png" alt="" />
+                </div>
+                <div id="final_information">
+                    <div id="authors">
+                        <h3>© 2020 RossViviana Inc.</h3>
+                        <h3>Made by RossEvv and Viviana Guerra Custodio</h3>
                     </div>
-                    <div>
-                        <img class="detail_diamont_Riot" src="assets/detail1.png" alt=""/>
+                    <div id="gitHub">
+                        <a href="https://github.com/Rossevv" class="nav_link" target="blank">
+                            <img src="assets/github-square-brands.svg" alt="" />
+                        </a>
+                        <a href="https://github.com/VivianaGuerraCustodio" class="nav_link" target="blank">
+                            <img src="assets/github-square-brands.svg" alt="" />
+                        </a>
                     </div>
-                    <div id="final_information">
-                        <div id="authors">
-                            <h3>© 2020 RossViviana Inc.</h3>
-                            <h3>Made by RossEvv and Viviana Guerra Custodio</h3>
-                        </div>
-                        <div id="gitHub">
-                            <a href="https://github.com/Rossevv" class="nav_link" target="blank">
-                                <img src="assets/github-square-brands.svg" alt=""/>
-                            </a>
-                            <a
-                                href="https://github.com/VivianaGuerraCustodio"
-                                class="nav_link"
-                                target="blank">
-                                <img src="assets/github-square-brands.svg" alt=""/>
-                            </a>
-                        </div>
-                        <div id="final_conditions">
-                            <a href="https://www.riotgames.com/es-419/privacy-notice-LATAM">Políticas de privacidad</a ><br/>
+                    <div id="final_conditions">
+                        <a href="https://www.riotgames.com/es-419/privacy-notice-LATAM">Políticas de privacidad</a ><br/>
                             <a href="https://www.riotgames.com/es-419/terms-of-service-LATAM">Términos de uso</a >
                         </div>
                     </div>
