@@ -72,7 +72,7 @@ describe('searchByName', () => {
     });
 });
 
-describe('arithmeticAverage', () => { // tome de ejemplo al primer campeon aahri
+describe('arithmeticAverage', () => { // tome de ejemplo al primer campeon aatrox 
     it('deberia retornar el valor calculado para utilidad', () => {
         expect(arithmeticAverage(dataLol[0], 'utilidad')).toEqual('48.4');
     });

@@ -92,31 +92,33 @@ popularHability.style.display = 'none';
 const champions = (array, type) => {
     array.forEach((champion) => {
         const div = document.createElement('div');
-        const img = document.createElement('img');
+        div.className = 'divChampion';
+        div.style.backgroundImage = `url("${champion.splash}")`;
+        // const img = document.createElement('img');
         const p = document.createElement('p');
         const p2 = document.createElement('p');
         let p3 = document.createElement('p');
         p.className = 'nameOfChampion';
-        img.className = 'imageOfChampion';
+        // img.className = 'imageOfChampion';
         p2.className = 'tagsOfChampion';
         p3.className = 'infoOfChampion';
         p.innerHTML = `${champion.name}`;
-        img.src = `${champion.splash}`;
+        // img.src = `${champion.splash}`;
         p2.innerHTML = type ? `${champion.tags}` : '';
         p3.innerHTML = type ? `${type} ${champion.info[type]}` : '';
-        div.appendChild(img);
+        // div.appendChild(img);
         div.appendChild(p);
         div.appendChild(p2);
         div.appendChild(p3);
         list.appendChild(div);
 
         p3 = type ? p3.style.display = 'block' : p3.style.display = 'none';
-        p3 = type ? p2.style.marginBottom = '3px' : p.style.marginBottom = '3px';
-        p3 = type ? p.style.marginBottom = '3px' : p.style.marginBottom = '3px';
+        // p3 = type ? p2.style.marginBottom = '3px' : p.style.marginBottom = '3px';
+        // p3 = type ? p.style.marginBottom = '3px' : p.style.marginBottom = '3px';
         divContador.style.backgroundColor = '#316a99';
         divContador.style.boxShadow = '0 0 10px #b3b4ab, 0 0 40px #b3b4ab, 0 0 80px #b3b4ab';
 
-        img.addEventListener('click', () => {
+        div.addEventListener('click', () => {
             graphicChart.style.display = 'block';
             externalLinks.style.display = 'none';
             gifChampion.style.display = 'none';
